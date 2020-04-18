@@ -1,0 +1,12 @@
+h1, p {
+    font-family: Lato;
+  }
+  body { margin: 0}
+
+.nav-color {
+  background-color: deepskyblue;
+}
+
+.float-right {
+  align-content:  right;
+}
