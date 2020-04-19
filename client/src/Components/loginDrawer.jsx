@@ -3,8 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-
-import App from '../App.js'; 
+import history from './History'; 
 
 
 
@@ -35,8 +34,8 @@ export class LoginDrawer extends React.Component {
             open={this.state.open}
             width={200}
             containerStyle={styles.navBar}>
-            <MenuItem onClick={() => App.history.push('/')}>Home Page</MenuItem>
-            <MenuItem onClick={() => App.hisotry.push('/signup')}>Sign-up</MenuItem>
+            <MenuItem onClick={() => history.push('/')}>Home Page</MenuItem>
+            <MenuItem onClick={() => history.push('/signup')}>Sign-up</MenuItem>
           </Drawer>
         </div>
       </MuiThemeProvider>

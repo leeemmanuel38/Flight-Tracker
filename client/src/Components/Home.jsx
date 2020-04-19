@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import LogoTick from '../Photos/tick.png';
 import LogoHome from '../Photos/home.png';
 import history from './History'; 
-
+import App from '../App'
 import '../App.css'
 
 
@@ -49,14 +49,14 @@ export default class Home extends Component {
 
                         <Nav className="mr-auto" >
                             <h7><Nav.Link onClick={() => history.push('/')}>Home</Nav.Link></h7>
-                            <h7><Nav.Link onClick={() => history.push('/About')}>About</Nav.Link></h7>
+                            <h7><Nav.Link onClick={() => history.push('/')}>About</Nav.Link></h7>
                         </Nav>
 
                         <div class="btn">
-                            <button type="button" onClick={() => history.push('/Register')} class="btn btn-warning btn-lg">SIGNUP</button>
+                            <button type="button" onClick={() => history.push('/signup')} class="btn btn-warning btn-lg">SIGNUP</button>
                         </div>
                         <div class="btn">
-                            <button type="button" onClick={() => history.push('/Login')} class="btn btn-success btn-lg">LOGIN</button>
+                            <button type="button" onClick={() => history.push('/login')} class="btn btn-success btn-lg">LOGIN</button>
                         </div>
                     </Navbar> 
                     <br/>
