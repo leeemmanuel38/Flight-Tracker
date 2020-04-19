@@ -18,15 +18,17 @@ export default class Login extends Component {
         this.state={
           email:'',
           password:''
+          
         }
       };
+
     handleSubmit = (event) => {
         event.preventDefault(); 
-        const {email, password} = this.state;
+        const {email, password} = this.state;  
         axios({
             url: '/authentication/login',
             method: 'POST',
-            data: {email, password}
+            data: {email, password},
         })
         .then ((response) => {
             this.props.history.push('./profile'); // on log in 
@@ -54,7 +56,7 @@ export default class Login extends Component {
                     <div>
                         <Drawer />
                         <div>
-                        <form onSubmit = {this.handleSubmit}>
+                        <form required = {this.handleSubmit}>
                             <p class="text-center">
                                 <TextField input type="text"
                                     name = "email"
