@@ -8,11 +8,12 @@ const SignupStrategy = new Strategy({passReqToCallback: true, usernameField: 'em
     
     User.findOne({ email }).lean().exec((err, user) => {
         if (err) {
-            return done(error, null);
+            return done(error);
         }
         if (user){
             return done('User already exists', null); 
         }
+        
 
         const encryptedPassword = bcrypt.hashSync(password, salt);
         let newUser = new User({

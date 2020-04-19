@@ -8,8 +8,15 @@ router.post('/signup', (req, res, next) => {
   passport.authenticate('local-signup', function(error, user, info) {
 
     if(error) {
-      return res.status(500).json({
+      return res.status(400).json({
         message: error || 'something bad happened', 
+  
+      })
+    }
+
+    if(!user) {
+      return res.status(400).json({
+        message: error || 'Cannot register this user', 
   
       })
     }
@@ -27,6 +34,13 @@ router.post('/login', function(req, res, next) {
     if(error) {
       return res.status(400).json({
         message: error || 'something bad happened', 
+  
+      })
+    }
+
+    if(!user) {
+      return res.status(400).json({
+        message: error || 'Please log in using email and password', 
   
       })
     }

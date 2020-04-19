@@ -20,7 +20,8 @@ const LoginStrategy = new Strategy({passReqToCallback: true, usernameField: 'ema
             return done('Email or Password incorrect', null); 
         }
         
-        return done(null, user); 
+        return done(null, user);  
+        
     }); 
 });
 
