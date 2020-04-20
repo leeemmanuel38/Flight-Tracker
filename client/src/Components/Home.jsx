@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import LogoTick from '../Photos/tick.png';
 import LogoHome from '../Photos/home.png';
-import wall from '../Photos/homeWallpaper.png';
 import history from './History'; 
 import DatePicker from './DatePicker'; 
 import '../App.css'

@@ -23,3 +23,8 @@ body{
   background-size: cover;
   height: calc(300% + 60px);
 }
+.wrap2{
+  background-image:url(https://unsplash.com/photos/rf6ywHVkrlY/download);
+  background-size: cover;
+  height: calc(300% + 60px);
+}
