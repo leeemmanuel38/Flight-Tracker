@@ -1,27 +1,36 @@
 import React, { Component } from 'react'; 
 import {Button,Nav,Navbar,Form,FormControl} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
+
+import TextField from 'material-ui/TextField';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+  
+  
 
 import LogoTick from '../Photos/tick.png';
 import LogoHome from '../Photos/home.png';
 import history from './History'; 
-import App from '../App'
+import DatePicker from './DatePicker'; 
 import '../App.css'
+
+const style = {
+    margin: 15,
+   };
 
 
 export default class Home extends Component {
-
-    state = {
-        startDate: new Date()
+    
+    constructor(props){
+        super(props);
+        this.state={
+          username:'',
+          password:''
+        }
       };
 
-    handleChange = date => {
-    this.setState({
-        startDate: date
-    });
-    };
+
     render() {
 
         //jsx
@@ -73,37 +82,24 @@ export default class Home extends Component {
 
 
                 <div class="container">
-                    <div class="row">
-                        <div class="form-group col-md-5">
-                            <label><h7>Departing airport</h7></label>
-                            <input type="text" class="form-control form-control-lg" id = "Departure" placeholder="Leaving from"></input>
-                        </div>
-
-                        <div class="form-group col-md-5">
-                            <label><h7>Arriving airport</h7></label>
-                            <input type="text" class="form-control form-control-lg" id = "Arrival" placeholder="Going to"></input>
-                        </div>
+                    <MuiThemeProvider>
+                        <div class="col">
                         
-                        <div class="form-group col-sm-5">
-                            <div class="form-row">
-                                <div class="form-group col-sm-5">
-                                    <label for="EarliestDepart"><h7>Earliest departure Date</h7></label>
-                                    <DatePicker
-                                        selected={this.state.startDate}
-                                        onChange={this.handleChange} 
-                                    />
-                                </div>
-
-                                <div class="form-group col-sm-5">
-                                    <label for="LatestReturn">Latest return date</label>
-                                    <DatePicker
-                                        selected={this.state.startDate}
-                                        onChange={this.handleChange} 
-                                    />
-                                </div>
+                            <div class="form-group row-md-5">
+                                <TextField
+                                    floatingLabelText="Departure"
+                                    hintText="Search Airport to Depart"
+                                    onChange = {(event,newValue) => this.setState({username:newValue})}/>
+                                <TextField
+                                    floatingLabelText="Arrival"
+                                    hintText="Search Airport to Depart"
+                                    onChange = {(event,newValue) => this.setState({username:newValue})}/>
+                                </div> 
                             </div>
-                        </div>
-                    </div>
+                            <br/>
+                        <DatePicker/>    
+                        
+                    </MuiThemeProvider>
                 </div>
 
                 <div class="container">
