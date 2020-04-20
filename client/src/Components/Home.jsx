@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import {Button,Nav,Navbar,Form,FormControl} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-import TextField from 'material-ui/TextField';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-  
-  
-
 import LogoTick from '../Photos/tick.png';
 import LogoHome from '../Photos/home.png';
+import wall from '../Photos/homeWallpaper.png';
 import history from './History'; 
 import DatePicker from './DatePicker'; 
 import '../App.css'
@@ -35,6 +29,9 @@ export default class Home extends Component {
 
         //jsx
         return (
+            <div class="ui centered aligned grid">
+            <div class="wrap">
+            
             <div className="HomePage">
                 <div className="Navbar">
                     <Navbar bg="success">
@@ -57,8 +54,8 @@ export default class Home extends Component {
                         </nav>
 
                         <Nav className="mr-auto" >
-                            <h7><Nav.Link onClick={() => history.push('/')}>Home</Nav.Link></h7>
-                            <h7><Nav.Link onClick={() => history.push('/')}>About</Nav.Link></h7>
+                            <h7><Nav.Link onClick={() => history.push('/')}>Contact</Nav.Link></h7>
+                            <h7><Nav.Link onClick={() => history.push('/about')}>About</Nav.Link></h7>
                         </Nav>
 
                         <div class="btn">
@@ -75,31 +72,30 @@ export default class Home extends Component {
                             <span class="badge badge-primary"><h2>T I C K-C L I C: The Flight Tracker App!</h2></span>
                         </div>
                         <div>
-                            <h3>Just one <span class="badge badge-primary">C L I C</span> away from finding the best rates on flights</h3>
+                            <h5>Just One <span class="badge badge-primary">C L I C</span> Away From Finding The Best Rates On Flights</h5>
                         </div>`
                     </p>
                 </div>
 
-
+                
                 <div class="container">
-                    <MuiThemeProvider>
-                        <div class="col">
+                    <div class="row">
+                        <div class="form-group col-md-4 text-center">
+                            <label><h7>Departing Airport</h7></label>
+                            <input type="text" class="form-control form-control-lg" id = "Departure" placeholder="Search Departure"></input>
+                        </div>
+
+                        <div class="form-group col-md-4 text-center">
+                            <label><h7>Arriving Airport</h7></label>
+                            <input type="text" class="form-control form-control-lg" id = "Arrival" placeholder="Search Arrival"></input>
+                        </div>
                         
-                            <div class="form-group row-md-5">
-                                <TextField
-                                    floatingLabelText="Departure"
-                                    hintText="Search Airport to Depart"
-                                    onChange = {(event,newValue) => this.setState({username:newValue})}/>
-                                <TextField
-                                    floatingLabelText="Arrival"
-                                    hintText="Search Airport to Depart"
-                                    onChange = {(event,newValue) => this.setState({username:newValue})}/>
-                                </div> 
+                        <div class="form-group col-md-5">
+                            <div class="form-row">
+                                <DatePicker/>
                             </div>
-                            <br/>
-                        <DatePicker/>    
-                        
-                    </MuiThemeProvider>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="container">
@@ -122,9 +118,9 @@ export default class Home extends Component {
                     </div>
                     <button type="submit" class="btn btn-success">SUBMIT</button>
                 </div>
-                
+                </div>
             </div>
-    
+            </div>
         );
     }
 }

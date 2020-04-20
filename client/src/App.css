@@ -3,10 +3,23 @@ h1, p {
   }
   body { margin: 0}
 
-.nav-color {
-  background-color: deepskyblue;
-}
+
 
 .float-right {
   align-content:  right;
+}
+
+body{
+  margin: 0;
+}
+
+.centered{
+  
+  height: 200px;
+}
+
+.wrap{
+  background-image:url(https://images.unsplash.com/photo-1558285549-2a06f9a5fe65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+  background-size: cover;
+  height: calc(300% + 60px);
 }

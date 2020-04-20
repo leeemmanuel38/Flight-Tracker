@@ -28,7 +28,6 @@ export class LoginDrawer extends React.Component {
             zDepth={10}
             title="User Log-in"
             onClick={this.handleToggle} className="material-icons"
-            
             />
           <Drawer
             open={this.state.open}
