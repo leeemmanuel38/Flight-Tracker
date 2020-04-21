@@ -7,6 +7,8 @@ import Profile from './Components/Profile';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import About from './Components/About'; 
+import Results from './Components/Results'; 
+import Contact from './Components/Contact'; 
 import NotFound from './Components/NotFound';
 
 export default class App extends Component {
@@ -21,6 +23,8 @@ export default class App extends Component {
               <Route path="/login" component={Login}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/about" component={About}/>
+              <Route path="/results" component={Results}/>
+              <Route path="/Contact" component={Contact}/>
               <Route path="/404" component={NotFound}/>
             </Switch>
           </Router>

@@ -9,7 +9,9 @@ export default class Profile extends Component {
         //jsx
         return (
             <div>
-            <h1>Welcome User !</h1>
+                <p class="text-center">
+                    <h1>Welcome User !</h1>
+                </p>
             </div>
         );
     }
