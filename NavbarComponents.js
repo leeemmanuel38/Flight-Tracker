@@ -52,6 +52,9 @@ class NavbarComponents extends React.Component{
                 <div class="btn">
                     <button type="button" class="btn btn-success btn-lg">LOGIN</button>
                 </div>
+                <div class="btn">
+                    <button type="button" class="btn btn-success btn-lg">LOGOUT</button>
+                </div>
                 </Navbar> 
                 <br/>
                 <br/>
