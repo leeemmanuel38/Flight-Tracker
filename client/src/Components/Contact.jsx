@@ -8,9 +8,9 @@ export default class Contact extends Component {
 
         //jsx
         return (
-            <div class="text-center">
+            <div class="contactUs text-center">
             <form class="wrap">
-            	<h1>Contact Us!</h1>
+            	<h1>Contact Us! (Page Is Still a Work In Progress)</h1>
 				<p class="lead">
   				<h2>Contact information regarding the developers of this application:</h2>
                 </p>

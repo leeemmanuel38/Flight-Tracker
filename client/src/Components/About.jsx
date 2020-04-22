@@ -59,12 +59,8 @@ export default class About extends Component {
                                     <div>
                                                               
                                     <li>
-                                        <h4>{data.code}</h4>
+                                       
                                         <h4> {data.name}</h4>
-                                        <h4>{data.city}</h4>
-                                        <h4> {data.state}</h4>
-                                        <h4> {data.country}</h4>
-                                        <h4> {data.type}</h4>
                                         
                                     </li>
                                     </div>

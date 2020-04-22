@@ -16,7 +16,7 @@ const style = {
   
       render(){
           return(
-            <div class="wrap2">
+            <div class="wrap">
               <MuiThemeProvider>
               <Drawer/>
                 <div>
@@ -29,7 +29,7 @@ const style = {
                         </div>
                     </div> 
                   <p class="text-center">
-                  <p class="font-weight-bold"><h1>Available Flights</h1></p>
+                  <p class="font-weight-bold"><h1>Available Flights (WIP)</h1></p>
                   </p>
                 <div>
                 <div class="container">

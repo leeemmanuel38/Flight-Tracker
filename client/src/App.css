@@ -19,14 +19,14 @@ body{
 }
 
 .wrap{
-  background-image:url(https://images.unsplash.com/photo-1558285549-2a06f9a5fe65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+  background-image:url(https://www.ecopetit.cat/wpic/mpic/154-1542455_wallpaper-white-passenger-plane-blue-map-background-tourism.jpg);
   background-size: cover;
   height: calc(300% + 60px);
 }
 .wrap2{
   background-image:url(https://unsplash.com/photos/rf6ywHVkrlY/download);
   background-size: cover;
-  height: calc(300% + 60px);
+  height: calc(270% + 57px);
 }
 .transparentForm{
   position: center;  
@@ -38,5 +38,11 @@ h5{
   padding: 0 0 20px; 
   font-weight:  initial;
   color:white
+}
+.contactUs {
+  margin: 0; 
+  padding: 0 0 20px; 
+  font-weight:  bold;
+  color:black
 }
 

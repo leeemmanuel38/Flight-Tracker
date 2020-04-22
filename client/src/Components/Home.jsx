@@ -6,6 +6,8 @@ import LogoTick from '../Photos/tick.png';
 import LogoHome from '../Photos/home.png';
 import history from './History'; 
 import DatePicker from './DatePicker'; 
+import Airports from './Airports'; 
+import AirportForms from './autoComplete'; 
 import '../App.css'
 
 const style = {
@@ -68,60 +70,61 @@ export default class Home extends Component {
                         <form class="transparentForm">
                             <p class="text-center">
                                 <div>
-                                    <span class="badge badge-primary"><h2>T I C K-C L I C: The Flight Tracker App!</h2></span>
+                                    <span class="badge badge-primary"><h2>T I C -C L I C K: The Flight Tracker App!</h2></span>
                                 </div>
                                 <div>
-                                    <h5>Just One <span class="badge badge-primary">C L I C</span> Away From Finding The Best Rates On Flights</h5>
+                                    <h5>Just One <span class="badge badge-primary">C L I C K</span> Away From Finding The Best Rates On Flights</h5>
                                 </div>`
                             </p>
                         </form>
                         
-                      
+                        {/* start of input forms */}
 
-                       
-                            <div class="container">
+                        <div class="container">
+                            <div class="col">
                                 <div class="row">
-                                    <div class="form-group col-md-4 text-center">
+                                    <div class="col-md-4 text-center">
                                         <label><h7>Departing Airport</h7></label>
-                                        <input type="text" class="form-control form-control-lg" id = "Departure" placeholder="Search Departure"></input>
+                                        <AirportForms items={Airports}/>
                                     </div>
-
-                                    <div class="form-group col-md-4 text-center">
+                                    <div class="col-md-4 text-center">
                                         <label><h7>Arriving Airport</h7></label>
-                                        <input type="text" class="form-control form-control-lg" id = "Arrival" placeholder="Search Arrival"></input>
-                                    </div>
-                            
-                                    <div class="form-group col-md-5">
-                                        <div class="form-row">
-                                            <DatePicker/>
-                                        </div>
+                                        <AirportForms items={Airports}/>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="container">
+                                <br/>
+                                <DatePicker/>
+                                <br/>
                                 <div class="row">
-                                    <div class="form-col col-sm-2">
+                                    <div class="col-sm-2 text center">
                                         <label for="price">Highest price willing to pay</label>
                                         <div class="input-group mb-2">
                                             <div class="input-group-text">$</div>
                                             <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter price"></input>
                                         </div>
                                     </div>
-                                    <div class="col-auto my-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="autoSizingCheck2"></input>
-                                            <label class="form-check-label" for="autoSizingCheck2">
-                                                Notify me (Must be logged in)
-                                            </label>
-                                        </div>
-                                    </div>     
                                 </div>
+                                <br/>
+                                
                                 <button type="submit" class="btn btn-success">SUBMIT</button>
+                                
                             </div>
-                       
+                        </div>
                     </div>
                 </div>
+                <Navbar  bg="dark" variant="dark">
+                    <Nav className="mr-auto" >
+                        <h7><Nav.Link onClick={() => history.push('/contact')}>Report an issue</Nav.Link></h7>
+                        <h7><Nav.Link onClick={() => history.push('/privacy')}>Privacy policy</Nav.Link></h7>
+                        <h7><Nav.Link onClick={() => history.push('/info')}>Using this site</Nav.Link></h7>
+                    </Nav>
+                    <div class="row">
+                        <h6>  | <a href="https://www.cheapoair.com/">cheapoair</a>   |   </h6>
+                        <h6>  |  <a href="https://www.expedia.com/">expedia</a>   |  </h6>
+                        <h6>  |   <a href="https://www.justfly.com/">justfly</a>  |  </h6>
+                    </div>
+     
+                </Navbar>
             </div>
         );
     }
