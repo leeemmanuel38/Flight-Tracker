@@ -21,6 +21,11 @@ class HomePage extends React.Component{
         return(
             <div className="MyApp">
                 <div class="container">
+                  <div class="alert alert-success alert-dismissable">
+                       <button type="button" class="close" data-dismiss="alert">x</button>
+                        <strong>Success!</strong> You have successfully logged in!
+                    </div>
+                  </div>
                     <div class="row">
                         <div class="form-group col-md-5">
                             <label><h7>Departing airport</h7></label>
