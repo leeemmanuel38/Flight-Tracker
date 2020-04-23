@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
+import Toggle from './Toggle'; 
 import App from '../App.css';
 
 function seacrchingFor(word){
@@ -71,10 +72,10 @@ export default class About extends Component {
                                                         <h6>City: {data.city}</h6>
                                                     </div>
                                                     <div class="form-group col-md-3">
-                                                        <h6>State: {data.state}</h6>
+                                                        <h6>Country: {data.country}</h6>
                                                     </div>
                                                     <div class="form-group col-md-3">
-                                                        <h6>Country: {data.country}</h6>
+                                                    <small><small><Toggle text="Flight Added!" /></small></small>
                                                     </div>
                             
                                                 </div> 

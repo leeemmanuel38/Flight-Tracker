@@ -7,6 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import { render } from '@testing-library/react';
 import Drawer from './ResultsDrawer'; 
+import Toggle from './Toggle';
 
 
 const style = {
@@ -52,35 +53,26 @@ const style = {
                     </div>
                 </div>
     
-                <div class="container">
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="autoSizingCheck2"></input>
-                                    <label class="form-check-label" for="autoSizingCheck2">
-                                    <p class="text-white">Add flight to list</p>
-                                    </label>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
                 <span class="d-block p-2 bg-dark text-white">
                 <div class="container">
                     <div class="row"> 
                         <div class="form-group col-md-2">
-                        <h4>Departing from: Albany</h4>
+                        <small><h6>Departing from: Albany</h6></small>
                         </div>
                         <div class="form-group col-md-2">
-                        <h4>Arriving in: Spain</h4>
+                        <h6>Arriving in: Spain</h6>
                         </div>
                         <div class="form-group col-md-2">
-                        <h4>Price: 400</h4>
+                        <h6>Price: 400</h6>
                         </div>
                         <div class="form-group col-md-2">
-                        <h4>Date: 11/12/13</h4>
+                        <h6>Date: 11/12/13</h6>
                         </div>
                         <div class="form-group col-md-2">
-                        <h4>Class: First</h4>
+                        <h6>Class: First</h6>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <small><small><Toggle text="Flight Added!" /></small></small>
                         </div>
                             
                         </div> 
