@@ -1,0 +1,118 @@
+[{
+        "flight_id": "DA-201",
+        "source": "New York",
+        "source_code": "JFK",
+        "destination": "Miami",
+        "destination_code": "MIA",
+        "fare": "$250",
+        "departs_at": "10:00 AM",
+        "arrives_at": "12:00 PM"
+    }, {
+        "flight_id": "DA-201",
+        "source": "Miami",
+        "source_code": "MIA",
+        "destination": "New York",
+        "destination_code": "JFK",
+        "fare": "$250",
+        "departs_at": "10:00 PM",
+        "arrives_at": "01:00 AM"
+    }, {
+        "flight_id": "SP-711",
+        "source": "Walla Walla",
+        "source_code": "ALW",
+        "destination": "Baltimore",
+        "destination_code": "BWI",
+        "fare": "$175",
+        "departs_at": "06:30 AM",
+        "arrives_at": "09:00 AM"
+    }, {
+        "flight_id": "JB-517",
+        "source": "Isle of coll",
+        "source_code": "COL",
+        "destination": "Ellsworth",
+        "destination_code": "BHB",
+        "fare": "$500",
+        "departs_at": "10:00 PM",
+        "arrives_at": "12:00 AM"
+    }, {
+        "flight_id": "JB-517",
+        "source": "Ellsworth",
+        "source_code": "BHB",
+        "destination": "Isle of coll",
+        "destination_code": "COL",
+        "fare": "$500",
+        "departs_at": "10:00 PM",
+        "arrives_at": "12:00 AM"
+    }, {
+        "flight_id": "JB-678",
+        "source": "New York",
+        "source_code": "JFK",
+        "destination": "Miami",
+        "destination_code": "MIA",
+        "fare": "$234",
+        "departs_at": "05:00 AM",
+        "arrives_at": "11:00 AM"
+    }, {
+        "flight_id": "SA-234",
+        "source": "New York",
+        "source_code": "JFK",
+        "destination": "Miami",
+        "destination_code": "MIA",
+        "fare": "$200",
+        "departs_at": "01:00 PM",
+        "arrives_at": "05:00 PM"
+    }, {
+        "flight_id": "FF-666",
+        "source": "Miami",
+        "source_code": "MIA",
+        "destination": "New York",
+        "destination_code": "JFK",
+        "fare": "$175",
+        "departs_at": "04:00 PM",
+        "arrives_at": "09:00 PM"
+    }, {
+        "flight_id": "JB-111",
+        "source": "Walla Walla",
+        "source_code": "ALW",
+        "destination": "Baltimore",
+        "destination_code": "BWI",
+        "fare": "$397",
+        "departs_at": "03:30 AM",
+        "arrives_at": "07:00 AM"
+    },
+        {
+            "flight_id": "FF-666",
+            "source": "Balitimore",
+            "source_code": "BWI",
+            "destination": "Walla Walla",
+            "destination_code": "ALW",
+            "fare": "$500",
+            "departs_at": "10:00 PM",
+            "arrives_at": "10:00 AM"
+        },
+
+        {
+            "flight_id": "DE-215",
+            "source": "Isle of coll",
+            "source_code": "COL",
+            "destination": "Ellsworth",
+            "destination_code": "BHB",
+            "fare": "$555",
+            "departs_at": "10:00 PM",
+            "arrives_at": "01:00 AM"
+        },
+
+        {
+            "flight_id": "FF-117",
+            "source": "Ellsworth",
+            "source_code": "BHB",
+            "destination": "Isle of coll",
+            "destination_code": "COL",
+            "fare": "$534",
+            "departs_at": "05:00 PM",
+            "arrives_at": "2:00 AM"
+    
+        }
+
+
+]

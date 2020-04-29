@@ -1,0 +1,48 @@
+h1, p {
+    font-family: Lato;
+  }
+  body { margin: 0}
+
+
+
+.float-right {
+  align-content:  right;
+}
+
+body{
+  margin: 0;
+}
+
+.centered{
+  
+  height: 200px;
+}
+
+.wrap{
+  background-image:url(https://www.ecopetit.cat/wpic/mpic/154-1542455_wallpaper-white-passenger-plane-blue-map-background-tourism.jpg);
+  background-size: cover;
+  height: calc(300% + 60px);
+}
+.wrap2{
+  background-image:url(https://unsplash.com/photos/rf6ywHVkrlY/download);
+  background-size: cover;
+  height: calc(270% + 57px);
+}
+.transparentForm{
+  position: center;  
+  background: rgba(0,0,0, 0.3);
+  padding: 10px; 
+}
+h5{
+  margin: 0; 
+  padding: 0 0 20px; 
+  font-weight:  initial;
+  color:white
+}
+.contactUs {
+  margin: 0; 
+  padding: 0 0 20px; 
+  font-weight:  bold;
+  color:black
+}
+
