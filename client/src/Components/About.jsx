@@ -59,7 +59,7 @@ export default class About extends Component {
                                                               
                                     <li>
                                        
-                                        <h4> {data.name}</h4>
+                                        <h4> {data.name}({data.code})</h4>
                                         
                                     </li>
                                     </div>

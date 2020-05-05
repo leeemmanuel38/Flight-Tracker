@@ -1,16 +1,24 @@
+/*
+# Author(s): Emmanuel Lee
+# Date: May 5, 2020
+# Flight Tracker Application 
+# team 3
+*/
+
 import React from 'react'; 
 import '../autoComplete.css';
 
 export default class autoComplete extends React.Component {
-
+    
     constructor(props) {
         super(props); 
         this.state = {
-            suggestions: [],
+            suggestions: [], // list of possible values 
             text: '', 
         };
     }
 
+    // update form on user input 
     onTextChange = (e) => {
         const {items} = this.props;
         const value = e.target.value; 
@@ -23,6 +31,7 @@ export default class autoComplete extends React.Component {
         
     }
 
+    // update value of text and suggested contents 
     suggestionSelected (value) {
         this.setState(() => ({
             text: value, 
@@ -30,6 +39,7 @@ export default class autoComplete extends React.Component {
         }))
     }
 
+    // display suggestions if match
     renderSuggestions () {
         const {suggestions} = this.state; 
         if (suggestions.length === 0) {
@@ -41,13 +51,13 @@ export default class autoComplete extends React.Component {
             </ul>
         );
     }
-
+    
     render() {
         const {text} = this.state; 
         return (
 
             <div className ="autoComplete text-center">
-                <input value={text} onChange={this.onTextChange} type="text" class="form-control form-control-lg" id = "Departure" placeholder="Search Departure"></input>
+                <input value={text} onChange={this.onTextChange} type="text" class="form-control form-control-lg" placeholder="Search Airport"></input>
                 <ul>
                     {this.renderSuggestions()}
                 </ul>

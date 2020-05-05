@@ -1,3 +1,11 @@
+/*
+# Author(s): Emmanuel Lee, Jarred Mayo
+# Modified by Jarred Mayo
+# Date: May 5, 2020
+# Flight Tracker Application 
+# team 3
+*/
+
 import React, { Component } from 'react';
 import Toggle from './Toggle'; 
 import Drawer from './ResultsDrawer';
@@ -74,7 +82,7 @@ export default class Results extends Component {
                                                             <h6>Country: {data.country}</h6>
                                                         </div>
                                                         <div class="form-group col-sm-3">
-                                                        <small><small><Toggle text="Flight Added!" /></small></small>
+                                                       <small><Toggle text="Flight Added!" /></small>
                                                         </div>
                                 
                                                     </div> 

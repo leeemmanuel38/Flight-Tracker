@@ -1,11 +1,3 @@
-/*
-# Author(s): Cheetah Louis
-# Modified by Emmanuel Lee
-# Date: May 5, 2020
-# Flight Tracker Application 
-# team 3
-*/
-
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
@@ -14,12 +6,12 @@ import MenuItem from 'material-ui/MenuItem';
 import history from './History'; 
 
 
-
 const styles = {
   navBar: {'top': AppBar.height}
+
 }
 
-export class LoginDrawer extends React.Component {
+export class AboutUsDrawer extends React.Component {
 
   constructor() {
     super();
@@ -32,9 +24,8 @@ export class LoginDrawer extends React.Component {
     return (
       <MuiThemeProvider>
         <div>
-          <AppBar
+          <AppBar style={{background: "Dodgerblue"}} 
             zDepth={10}
-            title="User Log-in"
             onClick={this.handleToggle} className="material-icons"
             />
           <Drawer
@@ -43,6 +34,7 @@ export class LoginDrawer extends React.Component {
             containerStyle={styles.navBar}>
             <MenuItem onClick={() => history.push('/')}>Home Page</MenuItem>
             <MenuItem onClick={() => history.push('/signup')}>Sign-up</MenuItem>
+            <MenuItem onClick={() => history.push('/login')}>Log-in</MenuItem>
           </Drawer>
         </div>
       </MuiThemeProvider>
@@ -51,4 +43,4 @@ export class LoginDrawer extends React.Component {
 
 } 
 
-export default LoginDrawer;
+export default AboutUsDrawer;

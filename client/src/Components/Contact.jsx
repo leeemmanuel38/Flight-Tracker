@@ -1,9 +1,16 @@
+/*
+# Author(s): Emmanuel Lee, Alandale Louron
+# Date: May 5, 2020
+# Flight Tracker Application 
+# team 3
+*/
 import React, { Component } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LogoTick from '../Photos/tick.png';
 import LogoHome from '../Photos/home.png';
 import history from './History';
+import Drawer from './AboutUsDrawer'
 import '../App.css'
 
 
@@ -16,44 +23,14 @@ export default class Contact extends Component {
         return (
             <div>
                 <form class="wrap2">
-                    <Navbar bg="success">
-                        <div class="form-row">
-                            <div class="badge">
-                                <span class="badge badge-warning"><h4>Track Your Next Trip!</h4></span>
-                            </div>
-                            <div class="badge">
-                                <span class="badge badge-warning"><h4>Book When You Find The Best Rates!</h4></span>
-                            </div>
-                            <div class="badge">
-                                <span class="badge badge-warning"><h4>Never Over Pay Again!</h4></span>
-                            </div>
-                        </div>
-                    </Navbar>
-                    <Navbar bg="primary" variant="dark">
-                        <nav class="navbar navbar-primary bg-primary">
-                            <img src={LogoTick} width="50" height="50" alt="" />
-                            <img src={LogoHome} width="25" height="25" alt="" />
-                        </nav>
-
-                        <Nav className="mr-auto" >
-                            <h7><Nav.Link onClick={() => history.push('/about')}>About</Nav.Link></h7>
-                            <h7><Nav.Link onClick={() => history.push('/')}>Home</Nav.Link></h7>
-                        </Nav>
-
-                        <div class="btn">
-                            <button type="button" onClick={() => history.push('/signup')} class="btn btn-warning btn-lg">SIGNUP</button>
-                        </div>
-                        <div class="btn">
-                            <button type="button" onClick={() => history.push('/login')} class="btn btn-success btn-lg">LOGIN</button>
-                        </div>
-                    </Navbar>
+                    <Drawer/>
                     <h1 class="text-center">Contact Us!</h1>
                     <p class="lead text-center">
                         <h2>Contact information regarding the developers of this application:</h2>
                     </p>
                     <form class="transparentForm">
                     <div class="contactUs text-center">
-                        <p><u><h3>Emmanuel Lee: Elee@albany.edu</h3></u></p>
+                        <p><u><h3>Emmanuel Lee: Ealee@albany.edu</h3></u></p>
                         <p><u><h3>Jane Hu: Jhu8@albany.edu</h3></u></p>
                         <p><u><h3>Alandale Lauron: Alauron@albany.edu</h3></u></p>
                         <p><u><h3>Jarret Mayo: Jjmayo@albany.edu</h3></u></p>

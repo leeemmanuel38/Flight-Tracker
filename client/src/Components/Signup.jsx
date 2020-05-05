@@ -1,9 +1,19 @@
+/*
+# Author(s): Saurabh Mhatre, accimeesterlin, Emmanuel Lee
+# URL: https://medium.com/technoetics/create-basic-login-forms-using-create-react-app-module-in-reactjs-511b9790dede
+# URL: https://www.youtube.com/watch?v=vLp0XluCT90
+# Modified by Cheetah Luis
+# Date: May 5, 2020
+# Flight Tracker Application 
+# team 3
+*/
+
 import React, { Component } from 'react'; 
 import axios from 'axios'; 
-import {} from 'react-router-dom'; 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import {Redirect} from 'react-router-dom'; 
 
 import Drawer from './SignupDrawer'; 
 
@@ -17,24 +27,32 @@ export default class Login extends Component {
         super(props);
         this.state={
           email:'',
-          password:''
+          password:'', 
+          
         }
       };
+
+    // verify sign up authentication with back end strategy 
     handleSubmit = (event) => {
         event.preventDefault(); 
-        const {email, password} = this.state;
+        const {email, password} = this.state;  
         axios({
             url: '/authentication/signup',
             method: 'POST',
-            data: {email, password}
+            data: {email, password},
         })
         .then ((response) => {
-            this.props.history.push('./profile'); // on log in 
+            const isAuthenticated = true;
+            window.localStorage.setItem('isAuthenticated', isAuthenticated);
+            this.setState({
+                email: this.state.email, 
+            }) 
+            this.props.history.push('./'); // on sign up
         })
         .catch ((error) => {
             this.setState({
                 errorMessage: error.response.data.message
-            }) // on log out
+            }) 
         })
       
     };
@@ -46,40 +64,47 @@ export default class Login extends Component {
     }; 
 
     render() {
-
-        //jsx
-        return (
-            <div>
-                <MuiThemeProvider>
-                    <div>
-                        <Drawer />
-                        <div>
-                        <form onSubmit = {this.handleSubmit}>
-                            <p class="text-center">
-                                <TextField input type="text"
-                                    name = "email"
-                                    hintText="Enter your Email"
-                                    floatingLabelText="Email"
-                                    onChange = {this.handleChange}
-                                />
-                                <br/>
-                                <TextField input type="password"
-                                    name = "password"
-                                    hintText="Enter your password"
-                                    floatingLabelText="Password"
-                                    onChange = {this.handleChange}
-                                />
-                                <br/>
-                                <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}/>
-                                <p><h5>{this.state.errorMessage}</h5></p>
-                            </p>
-                            </form>
-                        </div>
+        const isAuthenticated = window.localStorage.getItem('isAuthenticated'); 
+        if(!isAuthenticated){
+            return (
+                <div class="ui centered aligned grid">
+                    <div class="wrap2">
+                        <MuiThemeProvider>
+                            <div>
+                                <Drawer />
+                                <div>
+                                <form class="loginForm">
+                                <form required = {this.handleSubmit}>
+                                    <p class="text-center">
+                                        <TextField input type="text"
+                                            name = "email"
+                                            hintText="Enter your Email"
+                                            floatingLabelText="Email"
+                                            onChange = {this.handleChange}
+                                        />
+                                        <br/>
+                                        <TextField input type="password"
+                                            name = "password"
+                                            hintText="Create a password"
+                                            floatingLabelText="Password"
+                                            onChange = {this.handleChange}
+                                        />
+                                        <br/>
+                                        <RaisedButton label="Register!" primary={true} style={style} onClick={(event) => this.handleSubmit(event)}/>
+                                        <p><h4>{this.state.errorMessage}</h4></p>
+                                    </p>
+                                    </form>
+                                    </form>
+                                </div>
+                            </div>
+                        </MuiThemeProvider>
                     </div>
-                    
-                </MuiThemeProvider>
-                
-            </div>
-        );
-    }
+                </div>
+            );
+        
+        }
+        return(
+            <Redirect to='./'/>
+        ); 
+    }  
 }

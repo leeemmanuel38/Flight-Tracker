@@ -32,6 +32,12 @@ body{
   background: rgba(0,0,0, 0.3);
   padding: 10px; 
 }
+.loginForm{
+  position: center;
+  background: rgba(0,0,0, 0.1);
+  padding: 10px; 
+  font-weight:  bold;
+}
 h5{
   margin: 0; 
   padding: 0 0 20px; 
@@ -44,12 +50,27 @@ h5{
   font-weight:  bold;
   color:black
 }
-.resultForms {
-  text-align: left;
+.dateForms{
+  width: 41%;
+  border: 2px solid gray; 
+  background-color: rgba(255, 255, 255, 0.85); 
+
+}
+.address {
+  text-align: center;
+  right: 1%;
+  bottom: 25%; 
+  position: absolute;
+  width: 60%; 
+  background-color: rgba(255, 255, 255, 0.0); 
+}
+.resultForms2 {
+  text-align: center;
+  right: 1%;
+  bottom: 5%; 
+  position: absolute;
   width: 60%;
   border: 2px solid black; 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.85); 
 
 }
