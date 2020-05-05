@@ -8,9 +8,11 @@ import Login from './Components/Login';
 import Signup from './Components/Signup';
 import About from './Components/About'; 
 import Results from './Components/Results'; 
-import Contact from './Components/Contact'; 
+import Contact from './Components/Contact';
 import auto from './Components/autoComplete'; 
 import NotFound from './Components/NotFound';
+
+//import Search from './Components/Search';
 
 export default class App extends Component {
 

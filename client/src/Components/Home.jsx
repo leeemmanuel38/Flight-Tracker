@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import {Button,Nav,Navbar,Form,FormControl} from 'react-bootstrap';
+import {Nav,Navbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import LogoTick from '../Photos/tick.png';
@@ -9,11 +9,6 @@ import DatePicker from './DatePicker';
 import Airports from './Airports'; 
 import AirportForms from './autoComplete'; 
 import '../App.css'
-
-const style = {
-    margin: 15,
-   };
-
 
 export default class Home extends Component {
     
@@ -114,6 +109,10 @@ export default class Home extends Component {
                 </div>
                 <Navbar  bg="dark" variant="dark">
                     <Nav className="mr-auto" >
+                        <Nav.Link class="footer-copyright py-3">© 2020 Copyright:
+                            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+                        </Nav.Link>
+
                         <h7><Nav.Link onClick={() => history.push('/contact')}>Report an issue</Nav.Link></h7>
                         <h7><Nav.Link onClick={() => history.push('/privacy')}>Privacy policy</Nav.Link></h7>
                         <h7><Nav.Link onClick={() => history.push('/info')}>Using this site</Nav.Link></h7>

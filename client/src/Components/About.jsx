@@ -1,5 +1,4 @@
 import React, { Component } from 'react'; 
-import App from '../App.css';
 
 function seacrchingFor(word){
     return function(search){
@@ -35,7 +34,7 @@ export default class About extends Component {
     }
     render() {
 
-        var { isLoaded, items } = this.state; 
+        var { isLoaded } = this.state; 
         if(!isLoaded){
             return <div class="text-center"><h3>Loading...</h3></div>
         }
@@ -44,7 +43,7 @@ export default class About extends Component {
             const {word, items} = this.state; 
             return(
                 <div class="ui centered aligned grid">
-                    <div class="wrap"> 
+                    <div> 
                         <form class="form-group text-center">
                          
                                 <input type="text"

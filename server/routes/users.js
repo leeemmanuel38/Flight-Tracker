@@ -1,3 +1,11 @@
+/*
+# Author(s): Accimeesterlin
+# Modified by Emmanuel Lee
+# URL: https://www.youtube.com/watch?v=vLp0XluCT90
+# Date: May 5, 2020
+# Flight Tracker Application 
+# team 3
+*/
 const express = require('express');
 const router = express.Router();
 const passport = require('../passport'); 

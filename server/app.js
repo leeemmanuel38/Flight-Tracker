@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 9000;
 const log = console.log; 
 const app = express();
 
+
 // connect to mongodb atlas cloud database using mongoose 
 const mongooseAccess = async () => {
   const URL = 'mongodb+srv://admin:Illuminorz27@cluster0-vm8dw.mongodb.net/test?retryWrites=true&w=majority'
@@ -43,7 +44,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/authentication', usersRouter);
 app.use(passport.initialize());
-//app.use(passport.session());
+
 
 app.listen(PORT, () => {
   log(`Server is listening on PORT ${PORT}`); 
