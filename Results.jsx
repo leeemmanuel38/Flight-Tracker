@@ -47,10 +47,10 @@ export default class Results extends Component {
             return(
                 <div class="ui centered aligned grid">
                     <Drawer/>
-                    <div class="wrap"> 
-                        <h1 class="text-right">Available Flights (WIP)</h1>
-                        <form class="form-group text-center">
-                         
+                    <div class="wrap2"> 
+                        
+                        
+                        <form class="form-group text-center">      
                             <input type="text"
                                 onChange={this.searchandler} 
                                 value={word}
@@ -86,9 +86,17 @@ export default class Results extends Component {
 
                            
                         </ul>
+                        <div class="container">
+                            <div class="row"> 
+                                <div class="form-group col-md-6">
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-    
+                    
                 </div>
+                
             );
             
         }

@@ -1,100 +1,197 @@
-import React, { Component } from 'react';
-import Toggle from './Toggle'; 
-import App from '../App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import React from 'react'; 
+import '../App.css';
 
-function seacrchingFor(word){
-    return function(search){
-        return search.name.toLowerCase().includes(word.toLowerCase()) || search.code.toLowerCase().includes(word.toLowerCase());
-    }
-}
+const style = {
+  margin: 15,
+ };
 
-export default class About extends Component {
+class About extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            items: [], 
-            isLoaded: false,
-            word: '', 
-        }
-        this.searchandler = this.searchandler.bind(this);
-    }
-
-    searchandler(event){
-        this.setState({word: event.target.value})
-    }
-
-    componentDidMount(){
-        fetch('https://gist.githubusercontent.com/tdreyno/4278655/raw/7b0762c09b519f40397e4c3e100b097d861f5588/airports.json')
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    isLoaded: true, 
-                    items: json,  
-            })
-        });
-    }
-    render() {
-
-        var { isLoaded, items } = this.state; 
-        if(!isLoaded){
-            return <div class="text-center"><h3>Loading...</h3></div>
-        }
-
-        else {
-            const {word, items} = this.state; 
-            return(
-                <div class="ui centered aligned grid">
-                    <div class="wrap"> 
-                        <form class="form-group text-center">
-                         
-                                <input type="text"
-                                    onChange={this.searchandler} 
-                                    value={word}
-                                />
+    render(){
+        return(
+            <div class="wrap2">
+            <MuiThemeProvider>
+              <div>
+                
+                
+                <AppBar title="About"/>
+                <p class="text-center">
+                <p class="h1">About us</p>
+                </p>
+                <div>
+                <p class="text-center">
+                <p class="lead">
+                This website was assembled by a group of student developers.
+                </p>
+                <p class="lead">
+                This following is a short set of bios about each one of us.
+                </p>
+                </p>
+                <div>
+                  <p class="text-center">
+                    <div className="MyApp">
+                        <div class="container">
+                            <div class="row">
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             <div class="p-3 mb-2 bg-secondary text-light">
+                            <p class="h3">Jarrett Mayo</p>
+                             <p>
+                             Jarrett is a computer science student at Ualbany. He is currently in his senior
+                             and has created several projects in his time at the school including making
+                             a game of battleship, coding a binary search tree, coding both a Primms and 
+                             Kruskals algorithm, and is currently in the middle of developing this site, and 
+                             a password manager app, his two biggest projects yet.</p></div>
+                             
                             
-                        </form>
-                        <ul class="text-left">
-                            {
-                                items.filter(seacrchingFor(word)).map(data => 
-                                    <div>
-                          
-                                    <li>
-                                    <br/>
-                                    <br/>
-                                        <span class="d-block p-2 bg-white text-black">
-                                            <div class="container">
-                                                <div class="row"> 
-                                                    <div class="form-group col-md-3">
-                                                        <h6>Airport: {data.name}</h6>
-                                                    </div>
-                                                    <div class="form-group col-md-3">
-                                                        <h6>City: {data.city}</h6>
-                                                    </div>
-                                                    <div class="form-group col-md-3">
-                                                        <h6>Country: {data.country}</h6>
-                                                    </div>
-                                                    <div class="form-group col-md-3">
-                                                    <small><small><Toggle text="Flight Added!" /></small></small>
-                                                    </div>
-                            
-                                                </div> 
-                                            </div>
-                                        </span>
-                                        
-                                    </li>
-                                </div>
-   
-                            )};
-
-                           
-                        </ul>
+                            </div>
+                           </div>
+                        </div>
                     </div>
-    
+                 </p>
+                 <p class="text-center">
+                    <div className="MyApp">
+                        <div class="container">
+                            <div class="row">
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             <div class="p-3 mb-2 bg-secondary text-light">
+                             <p class="h3">Emmanuel Lee</p>
+                             <p>
+                             As an entry level software developer I aspire to build the set of skills necessary 
+                             to develop highly intelligent pieces of technology. 
+                             Technology that not only makes life easier, but sheds light on what is possible
+                             through dedication and hard work. Working to develop this site has taught me much 
+                             about the inner workings of web development and my interest can only grow from this point on.
+                             Developing this site has been a fun and rewarding experience and 
+                             I hope to learn more as I continue my journey as a software developer working
+                             for a highly involved tech company.
+                            </p>
+                            </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                 </p>
+                 <p class="text-center">
+                    <div className="MyApp">
+                        <div class="container">
+                            <div class="row">
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             <div class="p-3 mb-2 bg-secondary text-light">
+                             <p class="h3">Jane Hu</p>
+                             <p>
+                             Jane is a computer science major studying at University at Albany. 
+                             She has build several projects including battleship, minesweeper, and a drone, 
+                             can program in all forms of languages, particularly Java and C, 
+                             and is currently managing this amazing project.
+                            </p>
+                            </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                 </p>
+                 <p class="text-center">
+                    <div className="MyApp">
+                        <div class="container">
+                            <div class="row">
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             <div class="p-3 mb-2 bg-secondary text-light">
+                             <p class="h3">Alandale Lauron</p>
+                             <p>
+                             Alandale is a computer science major at UAlbany. 
+                             He has deployed database projects using ASP.NET. 
+                             He is also currently working on a medicine manager phone application. 
+                             He has proficiency in Java, and C#.
+                            </p>
+                            </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                 </p>
+                 <p class="text-center">
+                    <div className="MyApp">
+                        <div class="container">
+                            <div class="row">
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             <div class="p-3 mb-2 bg-secondary text-light">
+                             <p class="h3">Cheetah Louis</p>
+                             <p>
+                             Cheetah is a computer science major studying at UAlbany. 
+                             Cheetah is currently working on a app that helps you find a partner for the gym. 
+                             He is most proficient in Java and C.
+                            </p>
+                            </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                 </p> 
+                 <p class="text-center">
+                    <div className="MyApp">
+                        <div class="container">
+                            <div class="row">
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             </div>
+                             <div class="form-group col-md-12">
+                             <div class="p-3 mb-2 bg-secondary text-light">
+                             <p class="h3">Ye Min Htet</p>
+                             <p>
+                             Ye Min Htet is studying computer science at Ualbany.
+                             He has learned a lot from the courses there and is
+                             currently working on the Software Engineering project
+                            </p>
+                            </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                 </p>                           
                 </div>
-            );
-            
-        }
+            </div>    
+            </div>
+            </MuiThemeProvider>
+            </div>
+          
+        );
     }
-
 }
+
+
+export default About;
