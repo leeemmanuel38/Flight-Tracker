@@ -5,6 +5,8 @@ import LogoTick from '../Photos/tick.png';
 import LogoHome from '../Photos/home.png';
 import history from './History';
 import '../App.css'
+import Drawer from './HomeDrawer'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 export default class Contact extends Component {
@@ -15,6 +17,8 @@ export default class Contact extends Component {
         //jsx
         return (
             <div>
+                <MuiThemeProvider>
+                    <Drawer />
                 <form class="wrap2">
                     <Navbar bg="success">
                         <div class="form-row">
@@ -84,7 +88,7 @@ export default class Contact extends Component {
                     
                     <Navbar bg="light" variant="dark" >  
                         <footer>
-                            <div class="footer-copyright py-3">Â© 2020 Copyright:
+                            <div class="footer-copyright py-3">© 2020 Copyright:
                                 <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
                             </div>
                         </footer>
@@ -125,7 +129,7 @@ export default class Contact extends Component {
                         
                     </div>
                 </div>
-               
+               </MuiThemeProvider>
             </div>
         );
     }
