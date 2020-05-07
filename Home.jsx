@@ -15,7 +15,7 @@ const style = {
 
 
 export default class Home extends Component {
-    
+    /* ALANDALE - USED HOMEPAGE TO LINK TO CONTACT PAGE AND ALSO ADDED THE HOMEDRAWER TO HOMEPAGE */
     constructor(props){
         super(props);
         this.state={
@@ -26,7 +26,6 @@ export default class Home extends Component {
 
 
     render() {
-
         //jsx
             return (
                 <div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'; 
 import App from '../App.css';
-import AboutBc from '../Photos/About.png';
 
 function seacrchingFor(word){
     return function(search){
@@ -9,7 +8,7 @@ function seacrchingFor(word){
 }
 
 export default class About extends Component {
-
+    /* ALANDALE - OUTDATED, FINAL DESIGN USED BY JARRETT AND EMMANUEL  */
     constructor(props){
         super(props);
         this.state = {
@@ -38,14 +37,14 @@ export default class About extends Component {
 
         var { isLoaded, items } = this.state; 
         if(!isLoaded){
-            return <div>Loading...</div>
+            return <div class="text-center"><h3>Loading...</h3></div>
         }
 
         else {
             const {word, items} = this.state; 
             return(
                 <div class="ui centered aligned grid">
-                    <div class="wrap2"> 
+                    <div class="wrap"> 
                         <form class="form-group text-center">
                          
                                 <input type="text"
@@ -54,15 +53,20 @@ export default class About extends Component {
                                 />
                             
                         </form>
-                        <ul>
+                        <ul class="text-left">
                             {
                                 items.filter(seacrchingFor(word)).map(data => 
                                     <div>
                                                               
                                     <li>
-                                        {data.name}
+                                        <h4>{data.code}</h4>
+                                        <h4> {data.name}</h4>
+                                        <h4>{data.city}</h4>
+                                        <h4> {data.state}</h4>
+                                        <h4> {data.country}</h4>
+                                        <h4> {data.type}</h4>
+                                        
                                     </li>
-                                    <img src={AboutBc} width="50" height="50" alt=""/>
                                     </div>
    
                             )};

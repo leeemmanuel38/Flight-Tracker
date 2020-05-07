@@ -12,7 +12,7 @@ const styles = {
 }
 
 export class HomeDrawer extends React.Component {
-
+/* ALANDALE - CREATED HOMEDRAWER AS UI FOR HOMEPAGE AND CONTACT PAGES */
   constructor() {
     super();
     this.state = {open: false};

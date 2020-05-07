@@ -13,7 +13,7 @@ export default class Contact extends Component {
 
 
     render() {
-
+        /* ALANDALE - CREATED WHOLE CONTACT PAGE, REUSED HOME DASHBOARD, HOMEDRAWER, ADDED FOOTER WITH GITHUB LINKS */
         //jsx
         return (
             <div>
